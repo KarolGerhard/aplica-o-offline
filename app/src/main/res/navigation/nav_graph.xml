@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/usuarioListFragment">
+
+    <fragment
+        android:id="@+id/usuarioListFragment"
+        android:name="com.example.poctnoffline.ui.main.UsuarioListFragment"
+        android:label="UsuarioListFragment" >
+        <action
+            android:id="@+id/action_usuarioListFragment_to_detalheUsuarioFragment"
+            app:destination="@id/detalheUsuarioFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detalheUsuarioFragment"
+        android:name="com.example.poctnoffline.DetalheUsuarioFragment"
+        android:label="DetalheUsuarioFragment" />
+    <action android:id="@+id/action_global_usuarioListFragment"
+        app:destination="@id/usuarioListFragment"
+        app:popUpTo="@+id/menu_viagens"
+        app:popUpToInclusive="true" />
+</navigation>
